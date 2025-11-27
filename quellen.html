@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Quellen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Quellen</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section> 
+
+    <h2>Liste der Quellen</h2>
+    <ul>
+        <li><strong>Computer History Museum</strong> - Eine umfangreiche Sammlung von Informationen über die Entwicklung der Computertechnologie</li>
+        <li><strong>IBM Computer History Archive</strong> - Offizielle historische Dokumente von IBM</li>
+        <li><strong>Apple Historische Dokumentation</strong> - Geschichte und Entwicklung von Apple-Produkten</li>
+        <li><strong>Encyclopedia Britannica</strong> - Zuverlässige Artikel zu Computergeschichte und Informatik</li>
+        <li><strong>Wikipedia</strong> - Detaillierte Einträge zu Computern und Informatik</li>
+        <li><strong>Microsoft Azure</strong> - Informationen über moderne Cloud-Technologien</li>
+    </ul>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>

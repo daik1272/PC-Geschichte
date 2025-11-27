@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Geschichte der Computer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Die Entwicklung der Computertechnologie</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Willkommen!</h2>
+    <p>
+        Hier erfährst du alles über die faszinierende Geschichte der Computer - von den ersten
+        Rechenhilfen bis zu den modernen Technologien von heute. Wir führen dich durch die wichtigsten
+        Meilensteine der Computerentwicklung und zeigen dir, wie diese Maschinen unser Leben verändert haben.
+    </p>
+    <p>
+        Schau dich einfach um! Alle Seiten sind übersichtlich aufgebaut, sodass du schnell findest,
+        was dich interessiert. Ob du die ersten Computer erforschen möchtest oder lieber wissen willst,
+        wie die Technik von morgen aussieht - hier ist für jeden etwas dabei. Einfach losklicken!
+    </p>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>

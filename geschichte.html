@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Geschichte des Computers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Geschichte der Computer</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Geschichte des Computers</h2>
+    <p>
+        Es ist faszinierend zu sehen, wie alles begann. Bevor es die Heimcomputer gab, die wir heute kennen,
+        machte die Menschheit in der Mitte des 20. Jahrhunderts einen großen Schritt nach vorne. Menschen begannen,
+        Maschinen zu bauen, die schneller und genauer rechnen konnten als jeder Mensch - und damit war eine neue Ära geboren.
+    </p>
+
+    <h2>Die ersten elektronischen Computer</h2>
+    <img class="section-image" src="./images/ARL_ENIAC_01.png" alt="ENIAC">
+    <p>
+        In den 1940er- und 1950er-Jahren entstand etwas Revolutionäres: die ersten elektronischen Rechenmaschinen wie
+        der ENIAC und der UNIVAC. Diese Geräte waren gigantisch - sie füllten ganze Räume und verbrauchten soviel
+        Strom wie ein kleines Kraftwerk. Sie wurden hauptsächlich von Wissenschaftlern, Militärs und Regierungen
+        genutzt. Heutige Smartphones sind millionenfach leistungsfähiger und passen in deine Hosentasche - damals
+        war das völlig unvorstellbar. Aber genau diese großen Maschinen legten den Grundstein für alles, was später kam.
+    </p>
+
+    <h2>Das Erscheinen des ersten Personalcomputers</h2>
+    <img class="section-image" src="./images/kenbak1-1-1920x994.jpg" alt="Kenbak">
+    <p>
+        Dann kam die große Wende: Einige mutige Erfinder hatten eine verrückte Idee - einen Computer,
+        den normale Menschen nutzen konnten, nicht nur riesige Unternehmen. Ein Gerät, das in dein Wohnzimmer passt.
+    </p>
+    <p>
+        Der Kenbak-1 war 1971 einer der ersten Versuche. Er war noch sehr begrenzt in seinen Möglichkeiten,
+        aber die Idee war revolutionär. Ein paar Jahre später kam der Altair 8800 (1975) - und jetzt passierte wirklich
+        etwas Großes. Dieses Gerät wurde als Bausatz verkauft, den Enthusiasten selbst zusammenbauen konnten. Zwei junge
+        Programmierer namens Bill Gates und Paul Allen waren begeistert - sie gründeten später Microsoft.
+    </p>
+    <p>
+        Diese ersten Personalcomputer waren der Anfang von etwas Großem. Sie zeigten, dass Computer nicht nur für
+        Wissenschaftler und Militärs nützlich waren, sondern für jeden. Der Weg für die Computerrevolution war frei.
+    </p>
+    <h2>Der Beginn der Ära der Massen-PCs</h2>
+    <img class="section-image" src="./images/IBM_PC_5150.jpg" alt="IBM PC">
+    <p>
+        1981 war das Jahr, das alles änderte. Die Firma IBM brachte ihren IBM PC 5150 auf den Markt -
+        und damit begann die echte Computerrevolution. Dieses Gerät war anders: Es war erschwinglich, zuverlässig und
+        vor allem - es funktionierte. Der IBM PC setzte den Standard, dem heute immer noch fast alle Computer folgen.
+    </p>
+    <p>
+        Nach dem IBM PC ging alles ganz schnell. Plötzlich hatten Menschen Computer in ihrer Küche, in den Büros,
+        in den Schulen. Kinder lernten programmieren. Unternehmen digitalisierten ihre Prozesse. Die Welt veränderte sich.
+        Und all das begann mit dieser einen Maschine, die bewies, dass Computer nicht nur für Experten gedacht waren,
+        sondern für jeden - für dich, für mich, für alle.
+    </p>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>
